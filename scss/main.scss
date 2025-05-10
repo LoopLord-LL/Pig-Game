@@ -98,4 +98,11 @@ body {
       top: 428px;
     }
   }
+  .win-message {
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    transform: translate(-50%);
+    @include font-style(2rem, 700, $third-color);
+  }
 }

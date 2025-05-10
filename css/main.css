@@ -91,20 +91,20 @@
 .dice-container .show-1 {
   transform: rotateX(720deg) rotateZ(-720deg);
 }
-.dice-container .show-6 {
+.dice-container .show-2 {
   transform: rotateX(-900deg) rotateZ(1080deg);
 }
 .dice-container .show-3 {
-  transform: rotateY(-450deg) rotateZ(-1440deg);
-}
-.dice-container .show-4 {
   transform: rotateY(810deg) rotateZ(720deg);
 }
-.dice-container .show-5 {
+.dice-container .show-4 {
   transform: rotateX(-810deg) rotateZ(-1080deg);
 }
-.dice-container .show-2 {
+.dice-container .show-5 {
   transform: rotateX(450deg) rotateZ(-720deg);
+}
+.dice-container .show-6 {
+  transform: rotateY(-450deg) rotateZ(-1440deg);
 }
 
 * {
@@ -231,4 +231,13 @@ body {
 }
 .container .buttons .hold {
   top: 428px;
+}
+.container .win-message {
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  transform: translate(-50%);
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(12, 4, 12);
 }
