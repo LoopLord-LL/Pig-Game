@@ -1,3 +1,112 @@
+.dice-container {
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  transform: translate(-50%);
+}
+.dice-container .dice {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.dice-container .dice .side {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 2em;
+}
+.dice-container .dice .side .dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: -10px 5px 5px -10px;
+  border-radius: 20px;
+  background-color: rgb(247, 27, 111);
+}
+.dice-container .dice .side .two-1,
+.dice-container .dice .side .three-1,
+.dice-container .dice .side .four-1,
+.dice-container .dice .side .five-1,
+.dice-container .dice .side .six-1 {
+  top: 20%;
+  left: 20%;
+}
+.dice-container .dice .side .four-3,
+.dice-container .dice .side .five-3,
+.dice-container .dice .side .six-4 {
+  top: 20%;
+  left: 80%;
+}
+.dice-container .dice .side .one-1,
+.dice-container .dice .side .three-2,
+.dice-container .dice .side .five-5 {
+  top: 50%;
+  left: 50%;
+}
+.dice-container .dice .side .four-2,
+.dice-container .dice .side .five-2,
+.dice-container .dice .side .six-3 {
+  top: 80%;
+  left: 20%;
+}
+.dice-container .dice .side .two-2,
+.dice-container .dice .side .three-3,
+.dice-container .dice .side .four-4,
+.dice-container .dice .side .five-4,
+.dice-container .dice .side .six-6 {
+  top: 80%;
+  left: 80%;
+}
+.dice-container .dice .side .six-2 {
+  top: 50%;
+  left: 20%;
+}
+.dice-container .dice .side .six-5 {
+  top: 50%;
+  left: 80%;
+}
+.dice-container .dice .side:nth-child(1) {
+  transform: translateZ(3.1em);
+}
+.dice-container .dice .side:nth-child(6) {
+  transform: rotateY(90deg) translateZ(3.1em);
+}
+.dice-container .dice .side:nth-child(3) {
+  transform: rotateY(-90deg) translateZ(3.1em);
+}
+.dice-container .dice .side:nth-child(4) {
+  transform: rotateX(90deg) translateZ(3.1em);
+}
+.dice-container .dice .side:nth-child(5) {
+  transform: rotateX(-90deg) translateZ(3.1em);
+}
+.dice-container .dice .side:nth-child(2) {
+  transform: rotateY(-180deg) translateZ(3.1em);
+}
+.dice-container .show-1 {
+  transform: rotateX(720deg) rotateZ(-720deg);
+}
+.dice-container .show-6 {
+  transform: rotateX(-900deg) rotateZ(1080deg);
+}
+.dice-container .show-3 {
+  transform: rotateY(-450deg) rotateZ(-1440deg);
+}
+.dice-container .show-4 {
+  transform: rotateY(810deg) rotateZ(720deg);
+}
+.dice-container .show-5 {
+  transform: rotateX(-810deg) rotateZ(-1080deg);
+}
+.dice-container .show-2 {
+  transform: rotateX(450deg) rotateZ(-720deg);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +126,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 0;
-  max-width: 750px;
+  max-width: 800px;
   margin: 0 auto;
   position: relative;
 }
@@ -37,9 +146,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3.1rem;
+  gap: 5rem;
   width: 100%;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 .container .player-one h2,
 .container .player-two h2 {
@@ -101,6 +210,7 @@ body {
   background-color: rgb(247, 27, 111);
   color: #ffffff;
   border-color: #ffffff;
+  transform: scale(0.95);
 }
 .container .buttons .button:active {
   transform: scale(0.95);
@@ -114,11 +224,11 @@ body {
   margin: 0;
 }
 .container .buttons .new-game {
-  top: 76px;
+  top: 60px;
 }
 .container .buttons .roll-dice {
-  top: 288px;
+  top: 372px;
 }
 .container .buttons .hold {
-  top: 348px;
+  top: 428px;
 }

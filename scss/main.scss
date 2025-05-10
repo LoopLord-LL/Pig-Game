@@ -1,6 +1,4 @@
-@import "_mixins";
-@import "_variables";
-
+@import "_imports";
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +12,7 @@ body {
 }
 .container {
   @include flex-box(row, center, flex-start, 0);
-  max-width: 750px;
+  max-width: 800px;
   margin: 0 auto;
   position: relative;
   .player-one {
@@ -29,9 +27,9 @@ body {
   }
   .player-one,
   .player-two {
-    @include flex-box(column, center, center, 3.1rem);
+    @include flex-box(column, center, center, 5rem);
     width: 100%;
-    padding: 80px 0;
+    padding: 100px 0;
     h2 {
       @include font-style(2.1rem, 700, $player-name-color);
     }
@@ -72,8 +70,8 @@ body {
         background-color: $secondary-bg-color;
         color: $secondary-color;
         border-color: $secondary-color;
+        transform: scale(0.95);
       }
-
       &:active {
         transform: scale(0.95);
       }
@@ -89,15 +87,15 @@ body {
     }
 
     .new-game {
-      top: 76px;
+      top: 60px;
     }
 
     .roll-dice {
-      top: 288px;
+      top: 372px;
     }
 
     .hold {
-      top: 348px;
+      top: 428px;
     }
   }
 }

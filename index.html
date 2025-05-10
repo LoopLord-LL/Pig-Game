@@ -1,45 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Pig Game</title>
-    <link rel="stylesheet" href="./css/main.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="player-one">
-        <h2>PLAYER 1</h2>
-        <div class="score">0</div>
-        <div class="current-score">
-          <h3>CURRENT</h3>
-          <div class="current-point">0</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The Pig Game</title>
+        <link rel="stylesheet" href="./css/main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="player-one">
+                <h2>PLAYER 1</h2>
+                <div class="score">0</div>
+                <div class="current-score">
+                    <h3>CURRENT</h3>
+                    <div class="current-point">0</div>
+                </div>
+            </div>
+            <div class="player-two">
+                <h2>PLAYER 2</h2>
+                <div class="score">0</div>
+                <div class="current-score">
+                    <h3>CURRENT</h3>
+                    <div class="current-point">0</div>
+                </div>
+            </div>
+            <!-- Game Buttons -->
+            <div class="buttons">
+                <button class="new-game button" aria-label="Start a new game">
+                    <img src="./assets/images/restart-icon.png" alt="Restart icon" />
+                    <p>NEW GAME</p>
+                </button>
+                <button class="roll-dice button roll-button" aria-label="Roll the dice" id="roll">
+                    <img src="./assets/images/dice-icon.png" alt="Dice icon" />
+                    <p>ROLL DICE</p>
+                </button>
+                <button class="hold button" aria-label="Hold your score">
+                    <img src="./assets/images/hold-icon.png" alt="Hold icon" />
+                    <p>HOLD</p>
+                </button>
+            </div>
+            <!-- for dice -->
+            <div class="dice-container">
+                <div id="dice" class="dice">
+                    <div id="dice-one-side-one" class="side one">
+                        <div class="dot one-1"></div>
+                    </div>
+                    <div id="dice-one-side-two" class="side two">
+                        <div class="dot two-1"></div>
+                        <div class="dot two-2"></div>
+                    </div>
+                    <div id="dice-one-side-three" class="side three">
+                        <div class="dot three-1"></div>
+                        <div class="dot three-2"></div>
+                        <div class="dot three-3"></div>
+                    </div>
+                    <div id="dice-one-side-four" class="side four">
+                        <div class="dot four-1"></div>
+                        <div class="dot four-2"></div>
+                        <div class="dot four-3"></div>
+                        <div class="dot four-4"></div>
+                    </div>
+                    <div id="dice-one-side-five" class="side five">
+                        <div class="dot five-1"></div>
+                        <div class="dot five-2"></div>
+                        <div class="dot five-3"></div>
+                        <div class="dot five-4"></div>
+                        <div class="dot five-5"></div>
+                    </div>
+                    <div id="dice-one-side-six" class="side six">
+                        <div class="dot six-1"></div>
+                        <div class="dot six-2"></div>
+                        <div class="dot six-3"></div>
+                        <div class="dot six-4"></div>
+                        <div class="dot six-5"></div>
+                        <div class="dot six-6"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="player-two">
-        <h2>PLAYER 2</h2>
-        <div class="score">0</div>
-        <div class="current-score">
-          <h3>CURRENT</h3>
-          <div class="current-point">0</div>
-        </div>
-      </div>
-      <!-- Game Buttons -->
-      <div class="buttons">
-        <button class="new-game button" aria-label="Start a new game">
-          <img src="./assets/images/restart-icon.png" alt="Restart icon" />
-          <p>NEW GAME</p>
-        </button>
-        <button class="roll-dice button" aria-label="Roll the dice">
-          <img src="./assets/images/dice-icon.png" alt="Dice icon" />
-          <p>ROLL DICE</p>
-        </button>
-        <button class="hold button" aria-label="Hold your score">
-          <img src="./assets/images/hold-icon.png" alt="Hold icon" />
-          <p>HOLD</p>
-        </button>
-      </div>
-    </div>
-    <script src="./js/main.js"></script>
-  </body>
+        <script src="./js/main.js"></script>
+        <script src="./js/diceRolling.js"></script>
+    </body>
 </html>
