@@ -16,6 +16,7 @@ body {
   @include flex-box(row, center, flex-start, 0);
   max-width: 750px;
   margin: 0 auto;
+  position: relative;
   .player-one {
     background-color: $third-bg-color;
     border-top-left-radius: 12px;
@@ -28,24 +29,75 @@ body {
   }
   .player-one,
   .player-two {
-    @include flex-box(column, center, center, 50px);
+    @include flex-box(column, center, center, 3.1rem);
     width: 100%;
     padding: 80px 0;
     h2 {
-      @include font-style(34px, 700, $player-name-color);
+      @include font-style(2.1rem, 700, $player-name-color);
     }
     .score {
-      @include font-style(60px, 400, $primary-color);
+      @include font-style(3.75rem, 400, $primary-color);
     }
     .current-score {
-      @include flex-box(column, center, center, 16px);
+      @include flex-box(column, center, center, 1rem);
       padding: 10px 20px;
       background-color: $secondary-bg-color;
       border-radius: 10px;
       color: $secondary-color;
       .current-point {
-        @include font-style(40px, 400, $secondary-color);
+        @include font-style(2.5rem, 400, $secondary-color);
       }
+    }
+  }
+  .buttons {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .button {
+      @include flex-box(row, center, center, 0);
+      @include font-style(1rem, 600, $third-color);
+      padding: 10px 30px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: absolute;
+      border: none;
+      background: $third-bg-color;
+      mix-blend-mode: multiply;
+      &:hover {
+        background-color: $secondary-bg-color;
+        color: $secondary-color;
+        border-color: $secondary-color;
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .new-game {
+      top: 76px;
+    }
+
+    .roll-dice {
+      top: 288px;
+    }
+
+    .hold {
+      top: 348px;
     }
   }
 }
